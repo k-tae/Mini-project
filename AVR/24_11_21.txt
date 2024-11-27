@@ -1,0 +1,17 @@
+MPU(Micro Processer Unit)
+
+CPU를 단일 IC칩에 만든 반도체
+범용목적
+
+
+
+
+
+MCU(Micro Controller Unit)
+
+CPU+a(메모리 등)
+특별한 목적에 사용
+
+AVR - ATMEGxA128A
+
+F_CPU의 기본값은 10,000,000
