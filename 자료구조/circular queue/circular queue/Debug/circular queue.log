@@ -1,0 +1,3 @@
+﻿  cicular queue.c
+d:\intel_kth\자료구조\circular queue\circular queue\cicular queue.c(39): warning C4013: 'Count_Full_Data_Queue'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+  circular queue.vcxproj -> D:\intel_kth\자료구조\circular queue\Debug\circular queue.exe

@@ -475,13 +475,13 @@ END GROUP
  .debug_abbrev  0x00000a14       0x78 driver/Led/Led.o
  .debug_abbrev  0x00000a8c       0x68 main.o
 
-.debug_line     0x00000000      0x778
+.debug_line     0x00000000      0x775
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x16a C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega128a/avr51/crtatmega128a.o
  .debug_line    0x0000016a      0x30d ap/LedMachine/LedMachine.o
  .debug_line    0x00000477      0x1ad driver/Button/Button.o
  .debug_line    0x00000624       0xe7 driver/Led/Led.o
- .debug_line    0x0000070b       0x6d main.o
+ .debug_line    0x0000070b       0x6a main.o
 
 .debug_frame    0x00000000      0x120
  *(.debug_frame)
