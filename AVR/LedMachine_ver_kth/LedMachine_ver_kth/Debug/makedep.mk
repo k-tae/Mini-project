@@ -2,13 +2,11 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
-ap\Standlight\StandLight.c
+ap\LedMachine\LedMachine.c
 
-Driver\Button\Button.c
+driver\Button\Button.c
 
-Driver\Led\Led.c
+driver\Led\Led.c
 
 main.c
-
-periph\GPIO\GPIO.c
 

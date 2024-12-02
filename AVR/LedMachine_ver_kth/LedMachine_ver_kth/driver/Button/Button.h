@@ -17,8 +17,8 @@ typedef struct _button
 	uint8_t prevState;
 } btn_t;
 
-uint8_t Button_GetState(btn_t btn);
-void Button_init (btn_t btn,volatile uint8_t *DDR, volatile uint8_t *PIN, uint8_t PINNUM));
+uint8_t Button_GetState(btn_t *btn);
+void Button_init(btn_t *btn, volatile uint8_t *DDR, volatile uint8_t *PIN, uint8_t PINNUM);
 
 
 #endif /* BUTTON_H_ */

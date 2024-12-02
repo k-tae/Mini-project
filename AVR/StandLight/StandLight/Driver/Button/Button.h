@@ -4,6 +4,7 @@
 #define F_CPU 16000000UL
 #include <avr/io.h>
 #include <util/delay.h>
+#include "../../periph/GPIO/GPIO.h"
 
 enum {Pushed,Realesed};
 enum {ACT_NONE,ACT_PUSHED,ACT_REALESED};

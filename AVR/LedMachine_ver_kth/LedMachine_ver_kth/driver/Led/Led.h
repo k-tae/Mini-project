@@ -12,7 +12,7 @@ typedef struct _led
 	uint8_t pinNum;	
 }Led_t;
 
-void Led_init(Led_t led, volatile uint8_t *ddr, volatile uint8_t *port, uint8_t pinNum);
-uint8_t Led_On(Led_t led);
-uint8_t Led_Off(Led_t led);
+void Led_init(Led_t *led, volatile uint8_t *ddr, volatile uint8_t *port, uint8_t pinNum);
+uint8_t Led_On(Led_t *led);
+uint8_t Led_Off(Led_t *led);
 #endif /* LEDMACHINE_H_ */

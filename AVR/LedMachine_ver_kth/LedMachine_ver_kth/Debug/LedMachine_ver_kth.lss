@@ -1,0 +1,1057 @@
+
+LedMachine_ver_kth.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00800100  0000070c  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000698  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000029  00800100  00800100  0000070c  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  0000070c  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  0000073c  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 000000e0  00000000  00000000  0000077c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00001448  00000000  00000000  0000085c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000b92  00000000  00000000  00001ca4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   000008b9  00000000  00000000  00002836  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000001b0  00000000  00000000  000030f0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000005b4  00000000  00000000  000032a0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000322  00000000  00000000  00003854  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 000000a0  00000000  00000000  00003b76  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	4d c0       	rjmp	.+154    	; 0x9c <__ctors_end>
+   2:	00 00       	nop
+   4:	5b c0       	rjmp	.+182    	; 0xbc <__bad_interrupt>
+   6:	00 00       	nop
+   8:	59 c0       	rjmp	.+178    	; 0xbc <__bad_interrupt>
+   a:	00 00       	nop
+   c:	57 c0       	rjmp	.+174    	; 0xbc <__bad_interrupt>
+   e:	00 00       	nop
+  10:	55 c0       	rjmp	.+170    	; 0xbc <__bad_interrupt>
+  12:	00 00       	nop
+  14:	53 c0       	rjmp	.+166    	; 0xbc <__bad_interrupt>
+  16:	00 00       	nop
+  18:	51 c0       	rjmp	.+162    	; 0xbc <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	4f c0       	rjmp	.+158    	; 0xbc <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	4d c0       	rjmp	.+154    	; 0xbc <__bad_interrupt>
+  22:	00 00       	nop
+  24:	4b c0       	rjmp	.+150    	; 0xbc <__bad_interrupt>
+  26:	00 00       	nop
+  28:	49 c0       	rjmp	.+146    	; 0xbc <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	47 c0       	rjmp	.+142    	; 0xbc <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	45 c0       	rjmp	.+138    	; 0xbc <__bad_interrupt>
+  32:	00 00       	nop
+  34:	43 c0       	rjmp	.+134    	; 0xbc <__bad_interrupt>
+  36:	00 00       	nop
+  38:	41 c0       	rjmp	.+130    	; 0xbc <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	3f c0       	rjmp	.+126    	; 0xbc <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	3d c0       	rjmp	.+122    	; 0xbc <__bad_interrupt>
+  42:	00 00       	nop
+  44:	3b c0       	rjmp	.+118    	; 0xbc <__bad_interrupt>
+  46:	00 00       	nop
+  48:	39 c0       	rjmp	.+114    	; 0xbc <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	37 c0       	rjmp	.+110    	; 0xbc <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	35 c0       	rjmp	.+106    	; 0xbc <__bad_interrupt>
+  52:	00 00       	nop
+  54:	33 c0       	rjmp	.+102    	; 0xbc <__bad_interrupt>
+  56:	00 00       	nop
+  58:	31 c0       	rjmp	.+98     	; 0xbc <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	2f c0       	rjmp	.+94     	; 0xbc <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	2d c0       	rjmp	.+90     	; 0xbc <__bad_interrupt>
+  62:	00 00       	nop
+  64:	2b c0       	rjmp	.+86     	; 0xbc <__bad_interrupt>
+  66:	00 00       	nop
+  68:	29 c0       	rjmp	.+82     	; 0xbc <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	27 c0       	rjmp	.+78     	; 0xbc <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	25 c0       	rjmp	.+74     	; 0xbc <__bad_interrupt>
+  72:	00 00       	nop
+  74:	23 c0       	rjmp	.+70     	; 0xbc <__bad_interrupt>
+  76:	00 00       	nop
+  78:	21 c0       	rjmp	.+66     	; 0xbc <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	1f c0       	rjmp	.+62     	; 0xbc <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	1d c0       	rjmp	.+58     	; 0xbc <__bad_interrupt>
+  82:	00 00       	nop
+  84:	1b c0       	rjmp	.+54     	; 0xbc <__bad_interrupt>
+  86:	00 00       	nop
+  88:	19 c0       	rjmp	.+50     	; 0xbc <__bad_interrupt>
+  8a:	00 00       	nop
+  8c:	0d 02       	muls	r16, r29
+  8e:	22 02       	muls	r18, r18
+  90:	35 02       	muls	r19, r21
+  92:	4a 02       	muls	r20, r26
+  94:	5d 02       	muls	r21, r29
+  96:	72 02       	muls	r23, r18
+  98:	84 02       	muls	r24, r20
+  9a:	98 02       	muls	r25, r24
+
+0000009c <__ctors_end>:
+  9c:	11 24       	eor	r1, r1
+  9e:	1f be       	out	0x3f, r1	; 63
+  a0:	cf ef       	ldi	r28, 0xFF	; 255
+  a2:	d0 e1       	ldi	r29, 0x10	; 16
+  a4:	de bf       	out	0x3e, r29	; 62
+  a6:	cd bf       	out	0x3d, r28	; 61
+
+000000a8 <__do_clear_bss>:
+  a8:	21 e0       	ldi	r18, 0x01	; 1
+  aa:	a0 e0       	ldi	r26, 0x00	; 0
+  ac:	b1 e0       	ldi	r27, 0x01	; 1
+  ae:	01 c0       	rjmp	.+2      	; 0xb2 <.do_clear_bss_start>
+
+000000b0 <.do_clear_bss_loop>:
+  b0:	1d 92       	st	X+, r1
+
+000000b2 <.do_clear_bss_start>:
+  b2:	a9 32       	cpi	r26, 0x29	; 41
+  b4:	b2 07       	cpc	r27, r18
+  b6:	e1 f7       	brne	.-8      	; 0xb0 <.do_clear_bss_loop>
+  b8:	e1 d2       	rcall	.+1474   	; 0x67c <main>
+  ba:	ec c2       	rjmp	.+1496   	; 0x694 <_exit>
+
+000000bc <__bad_interrupt>:
+  bc:	a1 cf       	rjmp	.-190    	; 0x0 <__vectors>
+
+000000be <LedMachine_init>:
+uint32_t timeTick=0;
+static uint32_t prevTime;
+
+void LedMachine_init()
+{
+	Button_init (&b_left,&DDRA, &PINA, 0);
+  be:	20 e0       	ldi	r18, 0x00	; 0
+  c0:	49 e3       	ldi	r20, 0x39	; 57
+  c2:	50 e0       	ldi	r21, 0x00	; 0
+  c4:	6a e3       	ldi	r22, 0x3A	; 58
+  c6:	70 e0       	ldi	r23, 0x00	; 0
+  c8:	8e e0       	ldi	r24, 0x0E	; 14
+  ca:	91 e0       	ldi	r25, 0x01	; 1
+  cc:	5c d2       	rcall	.+1208   	; 0x586 <Button_init>
+	Button_init (&b_right,&DDRA, &PINA, 1);
+  ce:	21 e0       	ldi	r18, 0x01	; 1
+  d0:	49 e3       	ldi	r20, 0x39	; 57
+  d2:	50 e0       	ldi	r21, 0x00	; 0
+  d4:	6a e3       	ldi	r22, 0x3A	; 58
+  d6:	70 e0       	ldi	r23, 0x00	; 0
+  d8:	89 e1       	ldi	r24, 0x19	; 25
+  da:	91 e0       	ldi	r25, 0x01	; 1
+  dc:	54 d2       	rcall	.+1192   	; 0x586 <Button_init>
+	Led_init(&led_1,&DDRD,&PORTD,0);
+  de:	20 e0       	ldi	r18, 0x00	; 0
+  e0:	42 e3       	ldi	r20, 0x32	; 50
+  e2:	50 e0       	ldi	r21, 0x00	; 0
+  e4:	61 e3       	ldi	r22, 0x31	; 49
+  e6:	70 e0       	ldi	r23, 0x00	; 0
+  e8:	84 e2       	ldi	r24, 0x24	; 36
+  ea:	91 e0       	ldi	r25, 0x01	; 1
+  ec:	8d d2       	rcall	.+1306   	; 0x608 <Led_init>
+	Led_init(&led_2,&DDRD,&PORTD,1);
+  ee:	21 e0       	ldi	r18, 0x01	; 1
+  f0:	42 e3       	ldi	r20, 0x32	; 50
+  f2:	50 e0       	ldi	r21, 0x00	; 0
+  f4:	61 e3       	ldi	r22, 0x31	; 49
+  f6:	70 e0       	ldi	r23, 0x00	; 0
+  f8:	88 e0       	ldi	r24, 0x08	; 8
+  fa:	91 e0       	ldi	r25, 0x01	; 1
+  fc:	85 d2       	rcall	.+1290   	; 0x608 <Led_init>
+	Led_init(&led_3,&DDRD,&PORTD,2);
+  fe:	22 e0       	ldi	r18, 0x02	; 2
+ 100:	42 e3       	ldi	r20, 0x32	; 50
+ 102:	50 e0       	ldi	r21, 0x00	; 0
+ 104:	61 e3       	ldi	r22, 0x31	; 49
+ 106:	70 e0       	ldi	r23, 0x00	; 0
+ 108:	8f e1       	ldi	r24, 0x1F	; 31
+ 10a:	91 e0       	ldi	r25, 0x01	; 1
+ 10c:	7d d2       	rcall	.+1274   	; 0x608 <Led_init>
+	Led_init(&led_4,&DDRD,&PORTD,3);
+ 10e:	23 e0       	ldi	r18, 0x03	; 3
+ 110:	42 e3       	ldi	r20, 0x32	; 50
+ 112:	50 e0       	ldi	r21, 0x00	; 0
+ 114:	61 e3       	ldi	r22, 0x31	; 49
+ 116:	70 e0       	ldi	r23, 0x00	; 0
+ 118:	84 e1       	ldi	r24, 0x14	; 20
+ 11a:	91 e0       	ldi	r25, 0x01	; 1
+ 11c:	75 d2       	rcall	.+1258   	; 0x608 <Led_init>
+	state = led1_on;
+ 11e:	10 92 0d 01 	sts	0x010D, r1	; 0x80010d <state>
+ 122:	08 95       	ret
+
+00000124 <L1_On>:
+}
+
+void L1_On()
+{
+ 124:	0f 93       	push	r16
+ 126:	1f 93       	push	r17
+	Led_On(&led_1);
+ 128:	84 e2       	ldi	r24, 0x24	; 36
+ 12a:	91 e0       	ldi	r25, 0x01	; 1
+ 12c:	7f d2       	rcall	.+1278   	; 0x62c <Led_On>
+	
+	if (timeTick -prevTime >= 200)
+ 12e:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <timeTick>
+ 132:	90 91 05 01 	lds	r25, 0x0105	; 0x800105 <timeTick+0x1>
+ 136:	a0 91 06 01 	lds	r26, 0x0106	; 0x800106 <timeTick+0x2>
+ 13a:	b0 91 07 01 	lds	r27, 0x0107	; 0x800107 <timeTick+0x3>
+ 13e:	40 91 00 01 	lds	r20, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 142:	50 91 01 01 	lds	r21, 0x0101	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+ 146:	60 91 02 01 	lds	r22, 0x0102	; 0x800102 <__DATA_REGION_ORIGIN__+0x2>
+ 14a:	70 91 03 01 	lds	r23, 0x0103	; 0x800103 <__DATA_REGION_ORIGIN__+0x3>
+ 14e:	8c 01       	movw	r16, r24
+ 150:	9d 01       	movw	r18, r26
+ 152:	04 1b       	sub	r16, r20
+ 154:	15 0b       	sbc	r17, r21
+ 156:	26 0b       	sbc	r18, r22
+ 158:	37 0b       	sbc	r19, r23
+ 15a:	08 3c       	cpi	r16, 0xC8	; 200
+ 15c:	11 05       	cpc	r17, r1
+ 15e:	21 05       	cpc	r18, r1
+ 160:	31 05       	cpc	r19, r1
+ 162:	58 f0       	brcs	.+22     	; 0x17a <L1_On+0x56>
+	{
+		prevTime = timeTick;
+ 164:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 168:	90 93 01 01 	sts	0x0101, r25	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+ 16c:	a0 93 02 01 	sts	0x0102, r26	; 0x800102 <__DATA_REGION_ORIGIN__+0x2>
+ 170:	b0 93 03 01 	sts	0x0103, r27	; 0x800103 <__DATA_REGION_ORIGIN__+0x3>
+		state = led1_off;
+ 174:	81 e0       	ldi	r24, 0x01	; 1
+ 176:	80 93 0d 01 	sts	0x010D, r24	; 0x80010d <state>
+	}
+}
+ 17a:	1f 91       	pop	r17
+ 17c:	0f 91       	pop	r16
+ 17e:	08 95       	ret
+
+00000180 <L1_Off>:
+
+void L1_Off()
+{
+ 180:	0f 93       	push	r16
+ 182:	1f 93       	push	r17
+	Led_Off(&led_1);
+ 184:	84 e2       	ldi	r24, 0x24	; 36
+ 186:	91 e0       	ldi	r25, 0x01	; 1
+ 188:	64 d2       	rcall	.+1224   	; 0x652 <Led_Off>
+	if (timeTick -prevTime >= 200)
+ 18a:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <timeTick>
+ 18e:	90 91 05 01 	lds	r25, 0x0105	; 0x800105 <timeTick+0x1>
+ 192:	a0 91 06 01 	lds	r26, 0x0106	; 0x800106 <timeTick+0x2>
+ 196:	b0 91 07 01 	lds	r27, 0x0107	; 0x800107 <timeTick+0x3>
+ 19a:	40 91 00 01 	lds	r20, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 19e:	50 91 01 01 	lds	r21, 0x0101	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+ 1a2:	60 91 02 01 	lds	r22, 0x0102	; 0x800102 <__DATA_REGION_ORIGIN__+0x2>
+ 1a6:	70 91 03 01 	lds	r23, 0x0103	; 0x800103 <__DATA_REGION_ORIGIN__+0x3>
+ 1aa:	8c 01       	movw	r16, r24
+ 1ac:	9d 01       	movw	r18, r26
+ 1ae:	04 1b       	sub	r16, r20
+ 1b0:	15 0b       	sbc	r17, r21
+ 1b2:	26 0b       	sbc	r18, r22
+ 1b4:	37 0b       	sbc	r19, r23
+ 1b6:	08 3c       	cpi	r16, 0xC8	; 200
+ 1b8:	11 05       	cpc	r17, r1
+ 1ba:	21 05       	cpc	r18, r1
+ 1bc:	31 05       	cpc	r19, r1
+ 1be:	50 f0       	brcs	.+20     	; 0x1d4 <L1_Off+0x54>
+	{
+		prevTime = timeTick;
+ 1c0:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 1c4:	90 93 01 01 	sts	0x0101, r25	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+ 1c8:	a0 93 02 01 	sts	0x0102, r26	; 0x800102 <__DATA_REGION_ORIGIN__+0x2>
+ 1cc:	b0 93 03 01 	sts	0x0103, r27	; 0x800103 <__DATA_REGION_ORIGIN__+0x3>
+		state = led1_on;
+ 1d0:	10 92 0d 01 	sts	0x010D, r1	; 0x80010d <state>
+	}
+}
+ 1d4:	1f 91       	pop	r17
+ 1d6:	0f 91       	pop	r16
+ 1d8:	08 95       	ret
+
+000001da <L2_On>:
+
+void L2_On()
+{
+ 1da:	0f 93       	push	r16
+ 1dc:	1f 93       	push	r17
+	Led_On(&led_2);
+ 1de:	88 e0       	ldi	r24, 0x08	; 8
+ 1e0:	91 e0       	ldi	r25, 0x01	; 1
+ 1e2:	24 d2       	rcall	.+1096   	; 0x62c <Led_On>
+	if (timeTick -prevTime >= 200)
+ 1e4:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <timeTick>
+ 1e8:	90 91 05 01 	lds	r25, 0x0105	; 0x800105 <timeTick+0x1>
+ 1ec:	a0 91 06 01 	lds	r26, 0x0106	; 0x800106 <timeTick+0x2>
+ 1f0:	b0 91 07 01 	lds	r27, 0x0107	; 0x800107 <timeTick+0x3>
+ 1f4:	40 91 00 01 	lds	r20, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 1f8:	50 91 01 01 	lds	r21, 0x0101	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+ 1fc:	60 91 02 01 	lds	r22, 0x0102	; 0x800102 <__DATA_REGION_ORIGIN__+0x2>
+ 200:	70 91 03 01 	lds	r23, 0x0103	; 0x800103 <__DATA_REGION_ORIGIN__+0x3>
+ 204:	8c 01       	movw	r16, r24
+ 206:	9d 01       	movw	r18, r26
+ 208:	04 1b       	sub	r16, r20
+ 20a:	15 0b       	sbc	r17, r21
+ 20c:	26 0b       	sbc	r18, r22
+ 20e:	37 0b       	sbc	r19, r23
+ 210:	08 3c       	cpi	r16, 0xC8	; 200
+ 212:	11 05       	cpc	r17, r1
+ 214:	21 05       	cpc	r18, r1
+ 216:	31 05       	cpc	r19, r1
+ 218:	58 f0       	brcs	.+22     	; 0x230 <L2_On+0x56>
+	{
+		prevTime = timeTick;
+ 21a:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 21e:	90 93 01 01 	sts	0x0101, r25	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+ 222:	a0 93 02 01 	sts	0x0102, r26	; 0x800102 <__DATA_REGION_ORIGIN__+0x2>
+ 226:	b0 93 03 01 	sts	0x0103, r27	; 0x800103 <__DATA_REGION_ORIGIN__+0x3>
+		state = led2_off;
+ 22a:	83 e0       	ldi	r24, 0x03	; 3
+ 22c:	80 93 0d 01 	sts	0x010D, r24	; 0x80010d <state>
+	}
+}
+ 230:	1f 91       	pop	r17
+ 232:	0f 91       	pop	r16
+ 234:	08 95       	ret
+
+00000236 <L2_Off>:
+
+void L2_Off()
+{
+ 236:	0f 93       	push	r16
+ 238:	1f 93       	push	r17
+	Led_Off(&led_2);
+ 23a:	88 e0       	ldi	r24, 0x08	; 8
+ 23c:	91 e0       	ldi	r25, 0x01	; 1
+ 23e:	09 d2       	rcall	.+1042   	; 0x652 <Led_Off>
+	if (timeTick -prevTime >= 200)
+ 240:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <timeTick>
+ 244:	90 91 05 01 	lds	r25, 0x0105	; 0x800105 <timeTick+0x1>
+ 248:	a0 91 06 01 	lds	r26, 0x0106	; 0x800106 <timeTick+0x2>
+ 24c:	b0 91 07 01 	lds	r27, 0x0107	; 0x800107 <timeTick+0x3>
+ 250:	40 91 00 01 	lds	r20, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 254:	50 91 01 01 	lds	r21, 0x0101	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+ 258:	60 91 02 01 	lds	r22, 0x0102	; 0x800102 <__DATA_REGION_ORIGIN__+0x2>
+ 25c:	70 91 03 01 	lds	r23, 0x0103	; 0x800103 <__DATA_REGION_ORIGIN__+0x3>
+ 260:	8c 01       	movw	r16, r24
+ 262:	9d 01       	movw	r18, r26
+ 264:	04 1b       	sub	r16, r20
+ 266:	15 0b       	sbc	r17, r21
+ 268:	26 0b       	sbc	r18, r22
+ 26a:	37 0b       	sbc	r19, r23
+ 26c:	08 3c       	cpi	r16, 0xC8	; 200
+ 26e:	11 05       	cpc	r17, r1
+ 270:	21 05       	cpc	r18, r1
+ 272:	31 05       	cpc	r19, r1
+ 274:	58 f0       	brcs	.+22     	; 0x28c <L2_Off+0x56>
+	{
+		prevTime = timeTick;
+ 276:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 27a:	90 93 01 01 	sts	0x0101, r25	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+ 27e:	a0 93 02 01 	sts	0x0102, r26	; 0x800102 <__DATA_REGION_ORIGIN__+0x2>
+ 282:	b0 93 03 01 	sts	0x0103, r27	; 0x800103 <__DATA_REGION_ORIGIN__+0x3>
+		state = led2_on;
+ 286:	82 e0       	ldi	r24, 0x02	; 2
+ 288:	80 93 0d 01 	sts	0x010D, r24	; 0x80010d <state>
+	}
+}
+ 28c:	1f 91       	pop	r17
+ 28e:	0f 91       	pop	r16
+ 290:	08 95       	ret
+
+00000292 <L3_On>:
+
+void L3_On()
+{
+ 292:	0f 93       	push	r16
+ 294:	1f 93       	push	r17
+	Led_On(&led_3);
+ 296:	8f e1       	ldi	r24, 0x1F	; 31
+ 298:	91 e0       	ldi	r25, 0x01	; 1
+ 29a:	c8 d1       	rcall	.+912    	; 0x62c <Led_On>
+	if (timeTick -prevTime >= 200)
+ 29c:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <timeTick>
+ 2a0:	90 91 05 01 	lds	r25, 0x0105	; 0x800105 <timeTick+0x1>
+ 2a4:	a0 91 06 01 	lds	r26, 0x0106	; 0x800106 <timeTick+0x2>
+ 2a8:	b0 91 07 01 	lds	r27, 0x0107	; 0x800107 <timeTick+0x3>
+ 2ac:	40 91 00 01 	lds	r20, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 2b0:	50 91 01 01 	lds	r21, 0x0101	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+ 2b4:	60 91 02 01 	lds	r22, 0x0102	; 0x800102 <__DATA_REGION_ORIGIN__+0x2>
+ 2b8:	70 91 03 01 	lds	r23, 0x0103	; 0x800103 <__DATA_REGION_ORIGIN__+0x3>
+ 2bc:	8c 01       	movw	r16, r24
+ 2be:	9d 01       	movw	r18, r26
+ 2c0:	04 1b       	sub	r16, r20
+ 2c2:	15 0b       	sbc	r17, r21
+ 2c4:	26 0b       	sbc	r18, r22
+ 2c6:	37 0b       	sbc	r19, r23
+ 2c8:	08 3c       	cpi	r16, 0xC8	; 200
+ 2ca:	11 05       	cpc	r17, r1
+ 2cc:	21 05       	cpc	r18, r1
+ 2ce:	31 05       	cpc	r19, r1
+ 2d0:	58 f0       	brcs	.+22     	; 0x2e8 <L3_On+0x56>
+	{
+		prevTime = timeTick;
+ 2d2:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 2d6:	90 93 01 01 	sts	0x0101, r25	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+ 2da:	a0 93 02 01 	sts	0x0102, r26	; 0x800102 <__DATA_REGION_ORIGIN__+0x2>
+ 2de:	b0 93 03 01 	sts	0x0103, r27	; 0x800103 <__DATA_REGION_ORIGIN__+0x3>
+		state = led3_off;
+ 2e2:	85 e0       	ldi	r24, 0x05	; 5
+ 2e4:	80 93 0d 01 	sts	0x010D, r24	; 0x80010d <state>
+	}
+}
+ 2e8:	1f 91       	pop	r17
+ 2ea:	0f 91       	pop	r16
+ 2ec:	08 95       	ret
+
+000002ee <L3_Off>:
+
+void L3_Off()
+{
+ 2ee:	0f 93       	push	r16
+ 2f0:	1f 93       	push	r17
+	Led_Off(&led_3);
+ 2f2:	8f e1       	ldi	r24, 0x1F	; 31
+ 2f4:	91 e0       	ldi	r25, 0x01	; 1
+ 2f6:	ad d1       	rcall	.+858    	; 0x652 <Led_Off>
+	if (timeTick -prevTime >= 200)
+ 2f8:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <timeTick>
+ 2fc:	90 91 05 01 	lds	r25, 0x0105	; 0x800105 <timeTick+0x1>
+ 300:	a0 91 06 01 	lds	r26, 0x0106	; 0x800106 <timeTick+0x2>
+ 304:	b0 91 07 01 	lds	r27, 0x0107	; 0x800107 <timeTick+0x3>
+ 308:	40 91 00 01 	lds	r20, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 30c:	50 91 01 01 	lds	r21, 0x0101	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+ 310:	60 91 02 01 	lds	r22, 0x0102	; 0x800102 <__DATA_REGION_ORIGIN__+0x2>
+ 314:	70 91 03 01 	lds	r23, 0x0103	; 0x800103 <__DATA_REGION_ORIGIN__+0x3>
+ 318:	8c 01       	movw	r16, r24
+ 31a:	9d 01       	movw	r18, r26
+ 31c:	04 1b       	sub	r16, r20
+ 31e:	15 0b       	sbc	r17, r21
+ 320:	26 0b       	sbc	r18, r22
+ 322:	37 0b       	sbc	r19, r23
+ 324:	08 3c       	cpi	r16, 0xC8	; 200
+ 326:	11 05       	cpc	r17, r1
+ 328:	21 05       	cpc	r18, r1
+ 32a:	31 05       	cpc	r19, r1
+ 32c:	58 f0       	brcs	.+22     	; 0x344 <L3_Off+0x56>
+	{
+		prevTime = timeTick;
+ 32e:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 332:	90 93 01 01 	sts	0x0101, r25	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+ 336:	a0 93 02 01 	sts	0x0102, r26	; 0x800102 <__DATA_REGION_ORIGIN__+0x2>
+ 33a:	b0 93 03 01 	sts	0x0103, r27	; 0x800103 <__DATA_REGION_ORIGIN__+0x3>
+		state = led3_on;
+ 33e:	84 e0       	ldi	r24, 0x04	; 4
+ 340:	80 93 0d 01 	sts	0x010D, r24	; 0x80010d <state>
+	}
+}
+ 344:	1f 91       	pop	r17
+ 346:	0f 91       	pop	r16
+ 348:	08 95       	ret
+
+0000034a <L4_On>:
+
+void L4_On()
+{
+ 34a:	0f 93       	push	r16
+ 34c:	1f 93       	push	r17
+	Led_On(&led_4);
+ 34e:	84 e1       	ldi	r24, 0x14	; 20
+ 350:	91 e0       	ldi	r25, 0x01	; 1
+ 352:	6c d1       	rcall	.+728    	; 0x62c <Led_On>
+	if (timeTick -prevTime >= 200)
+ 354:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <timeTick>
+ 358:	90 91 05 01 	lds	r25, 0x0105	; 0x800105 <timeTick+0x1>
+ 35c:	a0 91 06 01 	lds	r26, 0x0106	; 0x800106 <timeTick+0x2>
+ 360:	b0 91 07 01 	lds	r27, 0x0107	; 0x800107 <timeTick+0x3>
+ 364:	40 91 00 01 	lds	r20, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 368:	50 91 01 01 	lds	r21, 0x0101	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+ 36c:	60 91 02 01 	lds	r22, 0x0102	; 0x800102 <__DATA_REGION_ORIGIN__+0x2>
+ 370:	70 91 03 01 	lds	r23, 0x0103	; 0x800103 <__DATA_REGION_ORIGIN__+0x3>
+ 374:	8c 01       	movw	r16, r24
+ 376:	9d 01       	movw	r18, r26
+ 378:	04 1b       	sub	r16, r20
+ 37a:	15 0b       	sbc	r17, r21
+ 37c:	26 0b       	sbc	r18, r22
+ 37e:	37 0b       	sbc	r19, r23
+ 380:	08 3c       	cpi	r16, 0xC8	; 200
+ 382:	11 05       	cpc	r17, r1
+ 384:	21 05       	cpc	r18, r1
+ 386:	31 05       	cpc	r19, r1
+ 388:	58 f0       	brcs	.+22     	; 0x3a0 <L4_On+0x56>
+	{
+		prevTime = timeTick;
+ 38a:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 38e:	90 93 01 01 	sts	0x0101, r25	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+ 392:	a0 93 02 01 	sts	0x0102, r26	; 0x800102 <__DATA_REGION_ORIGIN__+0x2>
+ 396:	b0 93 03 01 	sts	0x0103, r27	; 0x800103 <__DATA_REGION_ORIGIN__+0x3>
+		state = led4_off;
+ 39a:	87 e0       	ldi	r24, 0x07	; 7
+ 39c:	80 93 0d 01 	sts	0x010D, r24	; 0x80010d <state>
+	}
+}
+ 3a0:	1f 91       	pop	r17
+ 3a2:	0f 91       	pop	r16
+ 3a4:	08 95       	ret
+
+000003a6 <L4_Off>:
+
+void L4_Off()
+{
+ 3a6:	0f 93       	push	r16
+ 3a8:	1f 93       	push	r17
+	Led_Off(&led_4);
+ 3aa:	84 e1       	ldi	r24, 0x14	; 20
+ 3ac:	91 e0       	ldi	r25, 0x01	; 1
+ 3ae:	51 d1       	rcall	.+674    	; 0x652 <Led_Off>
+	if (timeTick -prevTime >= 200)
+ 3b0:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <timeTick>
+ 3b4:	90 91 05 01 	lds	r25, 0x0105	; 0x800105 <timeTick+0x1>
+ 3b8:	a0 91 06 01 	lds	r26, 0x0106	; 0x800106 <timeTick+0x2>
+ 3bc:	b0 91 07 01 	lds	r27, 0x0107	; 0x800107 <timeTick+0x3>
+ 3c0:	40 91 00 01 	lds	r20, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 3c4:	50 91 01 01 	lds	r21, 0x0101	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+ 3c8:	60 91 02 01 	lds	r22, 0x0102	; 0x800102 <__DATA_REGION_ORIGIN__+0x2>
+ 3cc:	70 91 03 01 	lds	r23, 0x0103	; 0x800103 <__DATA_REGION_ORIGIN__+0x3>
+ 3d0:	8c 01       	movw	r16, r24
+ 3d2:	9d 01       	movw	r18, r26
+ 3d4:	04 1b       	sub	r16, r20
+ 3d6:	15 0b       	sbc	r17, r21
+ 3d8:	26 0b       	sbc	r18, r22
+ 3da:	37 0b       	sbc	r19, r23
+ 3dc:	08 3c       	cpi	r16, 0xC8	; 200
+ 3de:	11 05       	cpc	r17, r1
+ 3e0:	21 05       	cpc	r18, r1
+ 3e2:	31 05       	cpc	r19, r1
+ 3e4:	58 f0       	brcs	.+22     	; 0x3fc <L4_Off+0x56>
+	{
+		prevTime = timeTick;
+ 3e6:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 3ea:	90 93 01 01 	sts	0x0101, r25	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+ 3ee:	a0 93 02 01 	sts	0x0102, r26	; 0x800102 <__DATA_REGION_ORIGIN__+0x2>
+ 3f2:	b0 93 03 01 	sts	0x0103, r27	; 0x800103 <__DATA_REGION_ORIGIN__+0x3>
+		state = led4_on;
+ 3f6:	86 e0       	ldi	r24, 0x06	; 6
+ 3f8:	80 93 0d 01 	sts	0x010D, r24	; 0x80010d <state>
+	}
+}
+ 3fc:	1f 91       	pop	r17
+ 3fe:	0f 91       	pop	r16
+ 400:	08 95       	ret
+
+00000402 <LedMahine_run>:
+
+void LedMahine_run()
+{
+	switch(state)
+ 402:	e0 91 0d 01 	lds	r30, 0x010D	; 0x80010d <state>
+ 406:	8e 2f       	mov	r24, r30
+ 408:	90 e0       	ldi	r25, 0x00	; 0
+ 40a:	88 30       	cpi	r24, 0x08	; 8
+ 40c:	91 05       	cpc	r25, r1
+ 40e:	08 f0       	brcs	.+2      	; 0x412 <LedMahine_run+0x10>
+ 410:	a0 c0       	rjmp	.+320    	; 0x552 <LedMahine_run+0x150>
+ 412:	fc 01       	movw	r30, r24
+ 414:	ea 5b       	subi	r30, 0xBA	; 186
+ 416:	ff 4f       	sbci	r31, 0xFF	; 255
+ 418:	34 c1       	rjmp	.+616    	; 0x682 <__tablejump2__>
+	{
+		case led1_on:
+		L1_On();
+ 41a:	84 de       	rcall	.-760    	; 0x124 <L1_On>
+ 41c:	8e e0       	ldi	r24, 0x0E	; 14
+		if (Button_GetState(&b_left) == ACT_RELEASED)
+ 41e:	91 e0       	ldi	r25, 0x01	; 1
+ 420:	c7 d0       	rcall	.+398    	; 0x5b0 <Button_GetState>
+ 422:	82 30       	cpi	r24, 0x02	; 2
+ 424:	21 f4       	brne	.+8      	; 0x42e <LedMahine_run+0x2c>
+ 426:	80 93 0d 01 	sts	0x010D, r24	; 0x80010d <state>
+		{
+			state = led2_on;
+ 42a:	aa de       	rcall	.-684    	; 0x180 <L1_Off>
+			L1_Off();
+ 42c:	92 c0       	rjmp	.+292    	; 0x552 <LedMahine_run+0x150>
+ 42e:	89 e1       	ldi	r24, 0x19	; 25
+		}
+		else if (Button_GetState(&b_right) == ACT_RELEASED)
+ 430:	91 e0       	ldi	r25, 0x01	; 1
+ 432:	be d0       	rcall	.+380    	; 0x5b0 <Button_GetState>
+ 434:	82 30       	cpi	r24, 0x02	; 2
+ 436:	09 f0       	breq	.+2      	; 0x43a <LedMahine_run+0x38>
+ 438:	8c c0       	rjmp	.+280    	; 0x552 <LedMahine_run+0x150>
+ 43a:	86 e0       	ldi	r24, 0x06	; 6
+		{
+			state = led4_on;
+ 43c:	80 93 0d 01 	sts	0x010D, r24	; 0x80010d <state>
+			L1_Off();
+ 440:	9f de       	rcall	.-706    	; 0x180 <L1_Off>
+ 442:	87 c0       	rjmp	.+270    	; 0x552 <LedMahine_run+0x150>
+		}
+		break;
+		case led1_off:
+		L1_Off();
+ 444:	9d de       	rcall	.-710    	; 0x180 <L1_Off>
+ 446:	8e e0       	ldi	r24, 0x0E	; 14
+		if (Button_GetState(&b_left) == ACT_RELEASED)
+ 448:	91 e0       	ldi	r25, 0x01	; 1
+ 44a:	b2 d0       	rcall	.+356    	; 0x5b0 <Button_GetState>
+ 44c:	82 30       	cpi	r24, 0x02	; 2
+ 44e:	19 f4       	brne	.+6      	; 0x456 <LedMahine_run+0x54>
+ 450:	80 93 0d 01 	sts	0x010D, r24	; 0x80010d <state>
+		{
+			state = led2_on;
+ 454:	7e c0       	rjmp	.+252    	; 0x552 <LedMahine_run+0x150>
+ 456:	89 e1       	ldi	r24, 0x19	; 25
+		}
+		else if (Button_GetState(&b_right) == ACT_RELEASED)
+ 458:	91 e0       	ldi	r25, 0x01	; 1
+ 45a:	aa d0       	rcall	.+340    	; 0x5b0 <Button_GetState>
+ 45c:	82 30       	cpi	r24, 0x02	; 2
+ 45e:	09 f0       	breq	.+2      	; 0x462 <LedMahine_run+0x60>
+ 460:	78 c0       	rjmp	.+240    	; 0x552 <LedMahine_run+0x150>
+		{
+			state = led4_on;
+ 462:	86 e0       	ldi	r24, 0x06	; 6
+ 464:	80 93 0d 01 	sts	0x010D, r24	; 0x80010d <state>
+ 468:	74 c0       	rjmp	.+232    	; 0x552 <LedMahine_run+0x150>
+		}
+		break;
+		case led2_on:
+		L2_On();
+ 46a:	b7 de       	rcall	.-658    	; 0x1da <L2_On>
+		if (Button_GetState(&b_left) == ACT_RELEASED)
+ 46c:	8e e0       	ldi	r24, 0x0E	; 14
+ 46e:	91 e0       	ldi	r25, 0x01	; 1
+ 470:	9f d0       	rcall	.+318    	; 0x5b0 <Button_GetState>
+ 472:	82 30       	cpi	r24, 0x02	; 2
+ 474:	29 f4       	brne	.+10     	; 0x480 <LedMahine_run+0x7e>
+		{
+			state = led3_on;
+ 476:	84 e0       	ldi	r24, 0x04	; 4
+ 478:	80 93 0d 01 	sts	0x010D, r24	; 0x80010d <state>
+			L2_Off();
+ 47c:	dc de       	rcall	.-584    	; 0x236 <L2_Off>
+		}
+		else if (Button_GetState(&b_right) == ACT_RELEASED)
+ 47e:	69 c0       	rjmp	.+210    	; 0x552 <LedMahine_run+0x150>
+ 480:	89 e1       	ldi	r24, 0x19	; 25
+ 482:	91 e0       	ldi	r25, 0x01	; 1
+ 484:	95 d0       	rcall	.+298    	; 0x5b0 <Button_GetState>
+ 486:	82 30       	cpi	r24, 0x02	; 2
+ 488:	09 f0       	breq	.+2      	; 0x48c <LedMahine_run+0x8a>
+		{
+			state = led1_on;
+ 48a:	63 c0       	rjmp	.+198    	; 0x552 <LedMahine_run+0x150>
+ 48c:	10 92 0d 01 	sts	0x010D, r1	; 0x80010d <state>
+			L2_Off();
+ 490:	d2 de       	rcall	.-604    	; 0x236 <L2_Off>
+		}
+		break;
+		case led2_off:
+		L2_Off();
+ 492:	5f c0       	rjmp	.+190    	; 0x552 <LedMahine_run+0x150>
+ 494:	d0 de       	rcall	.-608    	; 0x236 <L2_Off>
+		if (Button_GetState(&b_left) == ACT_RELEASED)
+ 496:	8e e0       	ldi	r24, 0x0E	; 14
+ 498:	91 e0       	ldi	r25, 0x01	; 1
+ 49a:	8a d0       	rcall	.+276    	; 0x5b0 <Button_GetState>
+ 49c:	82 30       	cpi	r24, 0x02	; 2
+ 49e:	21 f4       	brne	.+8      	; 0x4a8 <LedMahine_run+0xa6>
+		{
+			state = led3_on;
+ 4a0:	84 e0       	ldi	r24, 0x04	; 4
+ 4a2:	80 93 0d 01 	sts	0x010D, r24	; 0x80010d <state>
+		}
+		else if (Button_GetState(&b_right) == ACT_RELEASED)
+ 4a6:	55 c0       	rjmp	.+170    	; 0x552 <LedMahine_run+0x150>
+ 4a8:	89 e1       	ldi	r24, 0x19	; 25
+ 4aa:	91 e0       	ldi	r25, 0x01	; 1
+ 4ac:	81 d0       	rcall	.+258    	; 0x5b0 <Button_GetState>
+ 4ae:	82 30       	cpi	r24, 0x02	; 2
+ 4b0:	09 f0       	breq	.+2      	; 0x4b4 <LedMahine_run+0xb2>
+		{
+			state = led1_on;
+ 4b2:	4f c0       	rjmp	.+158    	; 0x552 <LedMahine_run+0x150>
+ 4b4:	10 92 0d 01 	sts	0x010D, r1	; 0x80010d <state>
+		}
+		break;
+		case led3_on:
+		L3_On();
+ 4b8:	4c c0       	rjmp	.+152    	; 0x552 <LedMahine_run+0x150>
+ 4ba:	eb de       	rcall	.-554    	; 0x292 <L3_On>
+		if (Button_GetState(&b_left) == ACT_RELEASED)
+ 4bc:	8e e0       	ldi	r24, 0x0E	; 14
+ 4be:	91 e0       	ldi	r25, 0x01	; 1
+ 4c0:	77 d0       	rcall	.+238    	; 0x5b0 <Button_GetState>
+ 4c2:	82 30       	cpi	r24, 0x02	; 2
+		{
+			state = led4_on;
+ 4c4:	29 f4       	brne	.+10     	; 0x4d0 <LedMahine_run+0xce>
+ 4c6:	86 e0       	ldi	r24, 0x06	; 6
+ 4c8:	80 93 0d 01 	sts	0x010D, r24	; 0x80010d <state>
+			L3_Off();
+ 4cc:	10 df       	rcall	.-480    	; 0x2ee <L3_Off>
+ 4ce:	41 c0       	rjmp	.+130    	; 0x552 <LedMahine_run+0x150>
+		}
+		else if (Button_GetState(&b_right) == ACT_RELEASED)
+ 4d0:	89 e1       	ldi	r24, 0x19	; 25
+ 4d2:	91 e0       	ldi	r25, 0x01	; 1
+ 4d4:	6d d0       	rcall	.+218    	; 0x5b0 <Button_GetState>
+ 4d6:	82 30       	cpi	r24, 0x02	; 2
+ 4d8:	09 f0       	breq	.+2      	; 0x4dc <LedMahine_run+0xda>
+ 4da:	3b c0       	rjmp	.+118    	; 0x552 <LedMahine_run+0x150>
+		{
+			state = led2_on;
+ 4dc:	80 93 0d 01 	sts	0x010D, r24	; 0x80010d <state>
+			L3_Off();
+ 4e0:	06 df       	rcall	.-500    	; 0x2ee <L3_Off>
+		}
+		break;
+		case led3_off:
+		L3_Off();
+ 4e2:	37 c0       	rjmp	.+110    	; 0x552 <LedMahine_run+0x150>
+ 4e4:	04 df       	rcall	.-504    	; 0x2ee <L3_Off>
+		if (Button_GetState(&b_left) == ACT_RELEASED)
+ 4e6:	8e e0       	ldi	r24, 0x0E	; 14
+ 4e8:	91 e0       	ldi	r25, 0x01	; 1
+ 4ea:	62 d0       	rcall	.+196    	; 0x5b0 <Button_GetState>
+ 4ec:	82 30       	cpi	r24, 0x02	; 2
+ 4ee:	21 f4       	brne	.+8      	; 0x4f8 <LedMahine_run+0xf6>
+		{
+			state = led4_on;
+ 4f0:	86 e0       	ldi	r24, 0x06	; 6
+ 4f2:	80 93 0d 01 	sts	0x010D, r24	; 0x80010d <state>
+		}
+		else if (Button_GetState(&b_right) == ACT_RELEASED)
+ 4f6:	2d c0       	rjmp	.+90     	; 0x552 <LedMahine_run+0x150>
+ 4f8:	89 e1       	ldi	r24, 0x19	; 25
+ 4fa:	91 e0       	ldi	r25, 0x01	; 1
+ 4fc:	59 d0       	rcall	.+178    	; 0x5b0 <Button_GetState>
+		{
+			state = led2_on;
+ 4fe:	82 30       	cpi	r24, 0x02	; 2
+ 500:	41 f5       	brne	.+80     	; 0x552 <LedMahine_run+0x150>
+		}
+		break;
+		case led4_on:
+		L4_On();
+ 502:	80 93 0d 01 	sts	0x010D, r24	; 0x80010d <state>
+		if (Button_GetState(&b_left) == ACT_RELEASED)
+ 506:	25 c0       	rjmp	.+74     	; 0x552 <LedMahine_run+0x150>
+ 508:	20 df       	rcall	.-448    	; 0x34a <L4_On>
+ 50a:	8e e0       	ldi	r24, 0x0E	; 14
+ 50c:	91 e0       	ldi	r25, 0x01	; 1
+ 50e:	50 d0       	rcall	.+160    	; 0x5b0 <Button_GetState>
+		{
+			state = led1_on;
+ 510:	82 30       	cpi	r24, 0x02	; 2
+ 512:	21 f4       	brne	.+8      	; 0x51c <LedMahine_run+0x11a>
+			L4_Off();
+ 514:	10 92 0d 01 	sts	0x010D, r1	; 0x80010d <state>
+ 518:	46 df       	rcall	.-372    	; 0x3a6 <L4_Off>
+		}
+		else if (Button_GetState(&b_right) == ACT_RELEASED)
+ 51a:	1b c0       	rjmp	.+54     	; 0x552 <LedMahine_run+0x150>
+ 51c:	89 e1       	ldi	r24, 0x19	; 25
+ 51e:	91 e0       	ldi	r25, 0x01	; 1
+ 520:	47 d0       	rcall	.+142    	; 0x5b0 <Button_GetState>
+ 522:	82 30       	cpi	r24, 0x02	; 2
+ 524:	b1 f4       	brne	.+44     	; 0x552 <LedMahine_run+0x150>
+		{
+			state = led3_on;
+ 526:	84 e0       	ldi	r24, 0x04	; 4
+ 528:	80 93 0d 01 	sts	0x010D, r24	; 0x80010d <state>
+			L4_Off();
+ 52c:	3c df       	rcall	.-392    	; 0x3a6 <L4_Off>
+ 52e:	11 c0       	rjmp	.+34     	; 0x552 <LedMahine_run+0x150>
+ 530:	3a df       	rcall	.-396    	; 0x3a6 <L4_Off>
+		}
+		break;
+		case led4_off:
+		L4_Off();
+ 532:	8e e0       	ldi	r24, 0x0E	; 14
+ 534:	91 e0       	ldi	r25, 0x01	; 1
+		if (Button_GetState(&b_left) == ACT_RELEASED)
+ 536:	3c d0       	rcall	.+120    	; 0x5b0 <Button_GetState>
+ 538:	82 30       	cpi	r24, 0x02	; 2
+ 53a:	19 f4       	brne	.+6      	; 0x542 <LedMahine_run+0x140>
+ 53c:	10 92 0d 01 	sts	0x010D, r1	; 0x80010d <state>
+ 540:	08 c0       	rjmp	.+16     	; 0x552 <LedMahine_run+0x150>
+		{
+			state = led1_on;
+ 542:	89 e1       	ldi	r24, 0x19	; 25
+ 544:	91 e0       	ldi	r25, 0x01	; 1
+ 546:	34 d0       	rcall	.+104    	; 0x5b0 <Button_GetState>
+		}
+		else if (Button_GetState(&b_right) == ACT_RELEASED)
+ 548:	82 30       	cpi	r24, 0x02	; 2
+ 54a:	19 f4       	brne	.+6      	; 0x552 <LedMahine_run+0x150>
+ 54c:	84 e0       	ldi	r24, 0x04	; 4
+ 54e:	80 93 0d 01 	sts	0x010D, r24	; 0x80010d <state>
+ 552:	8f e9       	ldi	r24, 0x9F	; 159
+		{
+			state = led3_on;
+ 554:	9f e0       	ldi	r25, 0x0F	; 15
+ 556:	01 97       	sbiw	r24, 0x01	; 1
+ 558:	f1 f7       	brne	.-4      	; 0x556 <LedMahine_run+0x154>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 55a:	00 c0       	rjmp	.+0      	; 0x55c <LedMahine_run+0x15a>
+ 55c:	00 00       	nop
+ 55e:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <timeTick>
+ 562:	90 91 05 01 	lds	r25, 0x0105	; 0x800105 <timeTick+0x1>
+		}
+		break;
+	}
+	_delay_ms(1);
+	timeTick++;
+ 566:	a0 91 06 01 	lds	r26, 0x0106	; 0x800106 <timeTick+0x2>
+ 56a:	b0 91 07 01 	lds	r27, 0x0107	; 0x800107 <timeTick+0x3>
+ 56e:	01 96       	adiw	r24, 0x01	; 1
+ 570:	a1 1d       	adc	r26, r1
+ 572:	b1 1d       	adc	r27, r1
+ 574:	80 93 04 01 	sts	0x0104, r24	; 0x800104 <timeTick>
+ 578:	90 93 05 01 	sts	0x0105, r25	; 0x800105 <timeTick+0x1>
+ 57c:	a0 93 06 01 	sts	0x0106, r26	; 0x800106 <timeTick+0x2>
+ 580:	b0 93 07 01 	sts	0x0107, r27	; 0x800107 <timeTick+0x3>
+ 584:	08 95       	ret
+
+00000586 <Button_init>:
+﻿#include "Button.h"
+
+void Button_init(btn_t *btn, volatile uint8_t *DDR, volatile uint8_t *PIN, uint8_t PINNUM)
+{
+ 586:	fc 01       	movw	r30, r24
+	btn -> ddr = DDR;
+ 588:	71 83       	std	Z+1, r23	; 0x01
+ 58a:	60 83       	st	Z, r22
+	btn -> pin = PIN;
+ 58c:	53 83       	std	Z+3, r21	; 0x03
+ 58e:	42 83       	std	Z+2, r20	; 0x02
+	btn -> pinNum = PINNUM;
+ 590:	24 83       	std	Z+4, r18	; 0x04
+	btn -> prevState = RELEASED;
+ 592:	81 e0       	ldi	r24, 0x01	; 1
+ 594:	85 83       	std	Z+5, r24	; 0x05
+	*btn -> ddr &= ~(1<<(btn -> pinNum));
+ 596:	fb 01       	movw	r30, r22
+ 598:	30 81       	ld	r19, Z
+ 59a:	81 e0       	ldi	r24, 0x01	; 1
+ 59c:	90 e0       	ldi	r25, 0x00	; 0
+ 59e:	02 c0       	rjmp	.+4      	; 0x5a4 <Button_init+0x1e>
+ 5a0:	88 0f       	add	r24, r24
+ 5a2:	99 1f       	adc	r25, r25
+ 5a4:	2a 95       	dec	r18
+ 5a6:	e2 f7       	brpl	.-8      	; 0x5a0 <Button_init+0x1a>
+ 5a8:	80 95       	com	r24
+ 5aa:	83 23       	and	r24, r19
+ 5ac:	80 83       	st	Z, r24
+ 5ae:	08 95       	ret
+
+000005b0 <Button_GetState>:
+}
+
+uint8_t Button_GetState(btn_t *btn)
+{
+ 5b0:	fc 01       	movw	r30, r24
+	uint8_t curstate= *(btn->pin) & (1<<btn->pinNum);
+ 5b2:	a2 81       	ldd	r26, Z+2	; 0x02
+ 5b4:	b3 81       	ldd	r27, Z+3	; 0x03
+ 5b6:	8c 91       	ld	r24, X
+ 5b8:	21 e0       	ldi	r18, 0x01	; 1
+ 5ba:	30 e0       	ldi	r19, 0x00	; 0
+ 5bc:	04 80       	ldd	r0, Z+4	; 0x04
+ 5be:	02 c0       	rjmp	.+4      	; 0x5c4 <Button_GetState+0x14>
+ 5c0:	22 0f       	add	r18, r18
+ 5c2:	33 1f       	adc	r19, r19
+ 5c4:	0a 94       	dec	r0
+ 5c6:	e2 f7       	brpl	.-8      	; 0x5c0 <Button_GetState+0x10>
+ 5c8:	28 23       	and	r18, r24
+
+	if((curstate == PUSHED) && ((btn ->prevState)==RELEASED))
+ 5ca:	59 f4       	brne	.+22     	; 0x5e2 <Button_GetState+0x32>
+ 5cc:	85 81       	ldd	r24, Z+5	; 0x05
+ 5ce:	81 30       	cpi	r24, 0x01	; 1
+ 5d0:	41 f4       	brne	.+16     	; 0x5e2 <Button_GetState+0x32>
+ 5d2:	af e3       	ldi	r26, 0x3F	; 63
+ 5d4:	bc e9       	ldi	r27, 0x9C	; 156
+ 5d6:	11 97       	sbiw	r26, 0x01	; 1
+ 5d8:	f1 f7       	brne	.-4      	; 0x5d6 <Button_GetState+0x26>
+ 5da:	00 c0       	rjmp	.+0      	; 0x5dc <Button_GetState+0x2c>
+ 5dc:	00 00       	nop
+	{
+		_delay_ms(10);
+		btn -> prevState = PUSHED;
+ 5de:	15 82       	std	Z+5, r1	; 0x05
+		return ACT_PUSHED;
+ 5e0:	08 95       	ret
+	}
+	if((curstate != PUSHED) && ((btn ->prevState)==PUSHED))
+ 5e2:	22 23       	and	r18, r18
+ 5e4:	69 f0       	breq	.+26     	; 0x600 <Button_GetState+0x50>
+ 5e6:	85 81       	ldd	r24, Z+5	; 0x05
+ 5e8:	81 11       	cpse	r24, r1
+ 5ea:	0c c0       	rjmp	.+24     	; 0x604 <Button_GetState+0x54>
+ 5ec:	8f e3       	ldi	r24, 0x3F	; 63
+ 5ee:	9c e9       	ldi	r25, 0x9C	; 156
+ 5f0:	01 97       	sbiw	r24, 0x01	; 1
+ 5f2:	f1 f7       	brne	.-4      	; 0x5f0 <Button_GetState+0x40>
+ 5f4:	00 c0       	rjmp	.+0      	; 0x5f6 <Button_GetState+0x46>
+ 5f6:	00 00       	nop
+	{
+		_delay_ms(10);
+		btn -> prevState = RELEASED;
+ 5f8:	81 e0       	ldi	r24, 0x01	; 1
+ 5fa:	85 83       	std	Z+5, r24	; 0x05
+		return ACT_RELEASED;
+ 5fc:	82 e0       	ldi	r24, 0x02	; 2
+ 5fe:	08 95       	ret
+	}
+	return ACT_NONE;
+ 600:	80 e0       	ldi	r24, 0x00	; 0
+ 602:	08 95       	ret
+ 604:	80 e0       	ldi	r24, 0x00	; 0
+ 606:	08 95       	ret
+
+00000608 <Led_init>:
+﻿#include "Led.h"
+
+void Led_init(Led_t *led, volatile uint8_t *ddr, volatile uint8_t *port, uint8_t pinNum)
+{
+ 608:	fc 01       	movw	r30, r24
+	led ->ddr = ddr;
+ 60a:	71 83       	std	Z+1, r23	; 0x01
+ 60c:	60 83       	st	Z, r22
+	led ->port = port;
+ 60e:	53 83       	std	Z+3, r21	; 0x03
+ 610:	42 83       	std	Z+2, r20	; 0x02
+	led ->pinNum = pinNum;
+ 612:	24 83       	std	Z+4, r18	; 0x04
+	*led->ddr |= (1<<(led->pinNum));
+ 614:	fb 01       	movw	r30, r22
+ 616:	30 81       	ld	r19, Z
+ 618:	81 e0       	ldi	r24, 0x01	; 1
+ 61a:	90 e0       	ldi	r25, 0x00	; 0
+ 61c:	02 c0       	rjmp	.+4      	; 0x622 <Led_init+0x1a>
+ 61e:	88 0f       	add	r24, r24
+ 620:	99 1f       	adc	r25, r25
+ 622:	2a 95       	dec	r18
+ 624:	e2 f7       	brpl	.-8      	; 0x61e <Led_init+0x16>
+ 626:	83 2b       	or	r24, r19
+ 628:	80 83       	st	Z, r24
+ 62a:	08 95       	ret
+
+0000062c <Led_On>:
+}
+
+uint8_t Led_On(Led_t *led)
+{
+ 62c:	dc 01       	movw	r26, r24
+	*(led->port) |= (1<< led->pinNum);
+ 62e:	12 96       	adiw	r26, 0x02	; 2
+ 630:	ed 91       	ld	r30, X+
+ 632:	fc 91       	ld	r31, X
+ 634:	13 97       	sbiw	r26, 0x03	; 3
+ 636:	40 81       	ld	r20, Z
+ 638:	21 e0       	ldi	r18, 0x01	; 1
+ 63a:	30 e0       	ldi	r19, 0x00	; 0
+ 63c:	c9 01       	movw	r24, r18
+ 63e:	14 96       	adiw	r26, 0x04	; 4
+ 640:	0c 90       	ld	r0, X
+ 642:	02 c0       	rjmp	.+4      	; 0x648 <Led_On+0x1c>
+ 644:	88 0f       	add	r24, r24
+ 646:	99 1f       	adc	r25, r25
+ 648:	0a 94       	dec	r0
+ 64a:	e2 f7       	brpl	.-8      	; 0x644 <Led_On+0x18>
+ 64c:	84 2b       	or	r24, r20
+ 64e:	80 83       	st	Z, r24
+}
+ 650:	08 95       	ret
+
+00000652 <Led_Off>:
+
+uint8_t Led_Off(Led_t *led)
+{
+	*(led->port) &= ~(1<< led->pinNum);
+ 652:	dc 01       	movw	r26, r24
+ 654:	12 96       	adiw	r26, 0x02	; 2
+ 656:	ed 91       	ld	r30, X+
+ 658:	fc 91       	ld	r31, X
+ 65a:	13 97       	sbiw	r26, 0x03	; 3
+ 65c:	40 81       	ld	r20, Z
+ 65e:	21 e0       	ldi	r18, 0x01	; 1
+ 660:	30 e0       	ldi	r19, 0x00	; 0
+ 662:	b9 01       	movw	r22, r18
+ 664:	14 96       	adiw	r26, 0x04	; 4
+ 666:	0c 90       	ld	r0, X
+ 668:	02 c0       	rjmp	.+4      	; 0x66e <Led_Off+0x1c>
+ 66a:	66 0f       	add	r22, r22
+ 66c:	77 1f       	adc	r23, r23
+ 66e:	0a 94       	dec	r0
+ 670:	e2 f7       	brpl	.-8      	; 0x66a <Led_Off+0x18>
+ 672:	cb 01       	movw	r24, r22
+ 674:	80 95       	com	r24
+ 676:	84 23       	and	r24, r20
+ 678:	80 83       	st	Z, r24
+}
+ 67a:	08 95       	ret
+
+0000067c <main>:
+#include <util/delay.h>
+
+
+int main(void)
+{
+	LedMachine_init();
+ 67c:	20 dd       	rcall	.-1472   	; 0xbe <LedMachine_init>
+    while (1) 
+    {
+		LedMahine_run();
+ 67e:	c1 de       	rcall	.-638    	; 0x402 <LedMahine_run>
+ 680:	fe cf       	rjmp	.-4      	; 0x67e <main+0x2>
+
+00000682 <__tablejump2__>:
+ 682:	ee 0f       	add	r30, r30
+ 684:	ff 1f       	adc	r31, r31
+ 686:	00 24       	eor	r0, r0
+ 688:	00 1c       	adc	r0, r0
+ 68a:	0b be       	out	0x3b, r0	; 59
+ 68c:	07 90       	elpm	r0, Z+
+ 68e:	f6 91       	elpm	r31, Z
+ 690:	e0 2d       	mov	r30, r0
+ 692:	09 94       	ijmp
+
+00000694 <_exit>:
+ 694:	f8 94       	cli
+
+00000696 <__stop_program>:
+ 696:	ff cf       	rjmp	.-2      	; 0x696 <__stop_program>

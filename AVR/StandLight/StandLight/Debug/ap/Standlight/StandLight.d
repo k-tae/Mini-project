@@ -15,7 +15,9 @@ ap/Standlight/StandLight.d ap/Standlight/StandLight.o: \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h \
  ../ap/Standlight/../../Driver/Button/Button.h \
- ../ap/Standlight/../../Driver/Led/Led.h
+ d:\intel_kth\avr\standlight\standlight\periph\gpio\gpio.h \
+ ../ap/Standlight/../../Driver/Led/Led.h \
+ d:\intel_kth\avr\standlight\standlight\periph\gpio\gpio.h
 
 ../ap/Standlight/StandLight.h:
 
@@ -49,4 +51,8 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 
 ../ap/Standlight/../../Driver/Button/Button.h:
 
+d:\intel_kth\avr\standlight\standlight\periph\gpio\gpio.h:
+
 ../ap/Standlight/../../Driver/Led/Led.h:
+
+d:\intel_kth\avr\standlight\standlight\periph\gpio\gpio.h:

@@ -1,15 +1,15 @@
 ﻿#include "Button.h"
 
-void Button_init (btn_t btn,volatile uint8_t *DDR, volatile uint8_t *PIN, uint8_t PINNUM))
+void Button_init(btn_t *btn, volatile uint8_t *DDR, volatile uint8_t *PIN, uint8_t PINNUM)
 {
 	btn -> ddr = DDR;
 	btn -> pin = PIN;
 	btn -> pinNum = PINNUM;
 	btn -> prevState = RELEASED;
-	*btn -> ddr &= ~(1<<(btn -> pinNum))
+	*btn -> ddr &= ~(1<<(btn -> pinNum));
 }
 
-uint8_t Button_GetState(btn_t btn)
+uint8_t Button_GetState(btn_t *btn)
 {
 	uint8_t curstate= *(btn->pin) & (1<<btn->pinNum);
 
@@ -26,5 +26,4 @@ uint8_t Button_GetState(btn_t btn)
 		return ACT_RELEASED;
 	}
 	return ACT_NONE;
-
 }
