@@ -15,3 +15,12 @@ CPU+a(메모리 등)
 AVR - ATMEGxA128A
 
 F_CPU의 기본값은 10,000,000
+
+GPIO (General Pupose Input Output - 범용 입출력)
+Register - 제어, 설정
+
+DDRx -> PDIO의 입출력을 설정하는 레지스터 (0이면 입력, 1이면 출력)
+
+PORTx -> 데이터를 출력하는 레지스터(0이면 0V 출력, 1이면 5V 출력)
+
+PINx -> 데이터를 입력하는 레지스터
