@@ -26,6 +26,14 @@ void StopWatch_incMilisec()
 	if(state == RUN)
 	{
 		milisec = (milisec+1) % 1000;
+		if (milisec<500)
+		{
+			FND_colonOn();
+		}
+		else
+		{
+			FND_colonOff();
+		}
 		if(milisec) return;
 		
 		sec = (sec+1) % 60;
