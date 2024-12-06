@@ -84,6 +84,7 @@ void Clock_execute()
 	uint16_t stopWatchData;
 	switch(state)
 	{
+		char Time[10];
 		case SECMIL:
 		stopWatchData =  (sec*100) + (milisec/10);
 		FND_setfndData(stopWatchData);
@@ -94,6 +95,14 @@ void Clock_execute()
 		else
 		{
 			FND_colonOff();
+		}
+		static uint8_t prevSec = 0xff;
+		if(sec!=prevSec)
+		{
+			LCD_writeStringXY("Time Clock",0,3);
+			sprintf(Time,"%02d:%02d:%02d",hour,min,sec);
+			LCD_writeStringXY(Time,1,4);
+			prevSec=sec;
 		}
 		break;
 		case HOURMIN:
@@ -107,10 +116,19 @@ void Clock_execute()
 		{
 			FND_colonOff();
 		}
+		if(sec!=prevSec)
+		{
+			LCD_writeStringXY("Time Clock",0,3);
+			sprintf(Time,"%02d:%02d:%02d",hour,min,sec);
+			LCD_writeStringXY(Time,1,4);
+			prevSec=sec;
+		}
 		break;
 		case MODIFY:
 		stopWatchData =  hour*100 + min;
 		FND_setfndData(stopWatchData);
+		sprintf(Time,"%02d:%02d:%02d",hour,min,sec);
+		LCD_writeStringXY(Time,1,4);
 		break;
 	}
 }
@@ -119,8 +137,4 @@ void Clock_run()
 {
 	Clock_eventCheck();
 	Clock_execute();
-	LCD_writeStringXY("Time Clock",0,3);
-	char Time[10];
-	sprintf(Time,"%02d:%02d:%02d", hour,min,sec);
-	LCD_writeStringXY(Time,1,4);
 }

@@ -20,7 +20,8 @@ ap/Clock/Clock.d ap/Clock/Clock.o: ../ap/Clock/Clock.c \
  ../ap/Clock/../../driver/fnd/fnd.h ../ap/Clock/../../periph/TIM/TIM.h \
  ../ap/Clock/../../driver/Button/Button.h \
  d:\intel_kth\avr\clock\clock\periph\gpio\gpio.h \
- ../ap/Clock/../../driver/LCD/LCD.h
+ ../ap/Clock/../../driver/LCD/LCD.h \
+ d:\intel_kth\avr\clock\clock\periph\gpio\gpio.h
 
 ../ap/Clock/Clock.h:
 
@@ -67,3 +68,5 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\
 d:\intel_kth\avr\clock\clock\periph\gpio\gpio.h:
 
 ../ap/Clock/../../driver/LCD/LCD.h:
+
+d:\intel_kth\avr\clock\clock\periph\gpio\gpio.h:

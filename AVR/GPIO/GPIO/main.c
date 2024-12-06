@@ -10,22 +10,25 @@
 #define		LED_PORT		PORTD
 #define		LED_DDR			DDRD
 
-//
 //int main(void)
 //{
-	//DDRD=0xff;
+	//DDRD = 0xff;
 	//uint8_t ledData = 0x01;
 	//while(1)
 	//{
 		//PORTD = ledData;
 		//_delay_ms(200);
-		////ledData = ledData * 2;
-		////if(ledData == 0)
-		////ledData = 0x01;
+		//ledData = ledData * 2;
+		//if(ledData == 0)
+		//ledData = 0x01;
+		//PORTD = ledData;
+		//_delay_ms(200);
 		//ledData=(ledData>>7|ledData<<1);
-		//
 	//}
 //}
+
+
+
 //
 //왕복
 //int main(void)
@@ -192,37 +195,25 @@
 	//}
 //}
 //
-//int main()
-//{
-	//DDRD = 0xff;
-	//uint8_t ledData = 0x05;
-	//while(1)
-	//{
-		//PORTD = ledData;
-		//_delay_ms(5);
-		//ledData = (ledData >> 7|ledData << 1);
-	//}
-//}
-
 
 //차량통제 화살표1
-//int main()
-//{
-	//DDRD = 0xff;
-	//uint8_t ledData=0x03, led=0x0c;
-	//while(1)
-	//{
-		//PORTD = ledData;
-		//_delay_ms(100);
-		//ledData=(ledData|led);
-		//led<<=2;
-		//if (led == 0)
-		//{PORTD = ledData;
-		//_delay_ms(100);
-		//ledData=0x03, led=0x0c;
-		//}
-	//}
-//}
+int main()
+{
+	DDRD = 0xff;
+	uint8_t ledData=0x03, led=0x0c;
+	while(1)
+	{
+		PORTD = ledData;
+		_delay_ms(100);
+		ledData=(ledData|led);
+		led<<=2;
+		if (led == 0)
+		{PORTD = ledData;
+		_delay_ms(100);
+		ledData=0x03, led=0x0c;
+		}
+	}
+}
 
 //차량통제 화살표2
 //int main()

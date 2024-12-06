@@ -22,8 +22,9 @@ main.d main.o: .././main.c \
  .././ap/Clock/../../periph/TIM/TIM.h \
  .././ap/Clock/../../driver/Button/Button.h \
  d:\intel_kth\avr\clock\clock\periph\gpio\gpio.h \
- .././ap/Clock/../../driver/LCD/LCD.h .././driver/fnd/fnd.h \
- .././driver/LCD/LCD.h
+ .././ap/Clock/../../driver/LCD/LCD.h \
+ d:\intel_kth\avr\clock\clock\periph\gpio\gpio.h .././driver/fnd/fnd.h \
+ .././driver/LCD/LCD.h .././driver/LCD/../../periph/GPIO/GPIO.h
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h:
 
@@ -73,6 +74,10 @@ d:\intel_kth\avr\clock\clock\periph\gpio\gpio.h:
 
 .././ap/Clock/../../driver/LCD/LCD.h:
 
+d:\intel_kth\avr\clock\clock\periph\gpio\gpio.h:
+
 .././driver/fnd/fnd.h:
 
 .././driver/LCD/LCD.h:
+
+.././driver/LCD/../../periph/GPIO/GPIO.h:
