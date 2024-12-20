@@ -62,14 +62,19 @@ void Uart1_Printf(char *fmt,...)
 char Uart1_Get_Pressed(void)
 {
 	// 글자가 입력이 되었으면 입력된 글자를 리턴
-
+	if (Macro_Extract_Area(USART1->SR,0x1,5)==1)
+	{
+		return USART1->DR;
+	}
 	// 글자 입력이 없으면 0 리턴
-
+	else
+	{return 0;}
 }
 
 char Uart1_Get_Char(void)
 {
 	// 글자 입력이 없으면 무한 대기, 글자가 들어오면 받은 글자 리턴
-
+	while (Macro_Extract_Area(USART1->SR,0x1,5)!=1){}
+	return USART1->DR;
 
 }

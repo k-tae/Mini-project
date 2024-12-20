@@ -15,7 +15,7 @@ void Main(void)
 	Sys_Init();
 	Uart_Printf("ADC Test\n");
 
-	Adc_IN5_Init();
+	Adc_Cds_Init();
 
 	for(;;)
 	{

@@ -1,6 +1,6 @@
 #include "device_driver.h"
 
-#if 1
+#if 0
 
 void Main(void)
 {
@@ -20,9 +20,8 @@ void Main(void)
 	RCC->APB2ENR |= (1<<3);
 
 	/* 비트 연산을 이용하여 LED0을 ON, LED1을 OFF로 하는 코드를 설계하시오 */
-
-
-
+	GPIOB ->CRH = (GPIOB->CRH & ~((1<<7)|(3<<3)|(1<<0)))|((3<5)|(3<<1));
+	GPIOB ->ODR = (GPIOB ->ODR & ~(0x1<<8))|(1<<9);
 
 }
 
@@ -38,16 +37,16 @@ void Main(void)
 	Macro_Set_Bit(RCC->APB2ENR, 3);
 
 	/* Macro를 이용하여 LED0을 ON, LED1을 OFF로 하는 코드를 설계하시오 */
-
-
-
+	Macro_Write_Block(GPIOB->CRH,0xff,0x66,0);
+	Macro_Write_Block(GPIOB->ODR,0x3,0x1,8);
+	
 }
 
 #endif
 
 /* Bit 연산 Macro 활용 LED Toggling */
 
-#if 0
+#if 1
 
 void Main(void)
 {
@@ -58,13 +57,15 @@ void Main(void)
 
 	/* 매크로를 이용하여 초기에 LED 모두 OFF */
 
-
+	Macro_Write_Block(GPIOB->CRH,0xff,0x66,0);
+	Macro_Write_Block(GPIOB->ODR,0x3,0x3,8);
 
 	for(;;)
 	{
 	/* LED 반전 및 Delay, Delay는 0x80000으로 설정 */
-
-
+	
+	Macro_Invert_Area(GPIOB->ODR,0x3,8);
+	for (i=0 ;i<0x80000;i++){}
 
 	}
 }

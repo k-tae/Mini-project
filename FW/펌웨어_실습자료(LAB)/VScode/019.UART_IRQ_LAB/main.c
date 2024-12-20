@@ -21,11 +21,11 @@ void Main(void)
 	Key_ISR_Enable(1);
 
 	// NVIC USART1 Pending clear
-
+	NVIC_ClearPendingIRQ(37);
 	// USART1 RX interrupt enable
-
+	USART1->CR1 |=(1<<5);
 	// NVIC USART1 interrupt enable
-
+	NVIC_EnableIRQ(37);
 
 	for(;;)
 	{

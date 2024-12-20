@@ -16,7 +16,10 @@ void Main(void)
 	for(;;)
 	{
 		// 받은 글자를 다시 UART로 출력한다
-
-
+		while (Macro_Extract_Area(USART1->SR,0x1,5)!=1){}
+		char data=USART1->DR;
+		while (Macro_Extract_Area(USART1->SR,0x1,7)!=1){}
+		
+		USART1->DR = data;
 	}
 }

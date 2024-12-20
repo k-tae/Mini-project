@@ -8,18 +8,23 @@ void Key_Poll_Init(void)
 
 int Key_Get_Pressed(void)
 {
-
-
+	uint8_t State = Macro_Extract_Area(~GPIOB->IDR,0x3,6);
+	return State;
 }
 
 void Key_Wait_Key_Released(void)
 {
-
-
+	while(Key_Get_Pressed());
 }
 
 int Key_Wait_Key_Pressed(void)
 {
+	int k=Key_Get_Pressed();
+	while(!k)
+	{
+		k=Key_Get_Pressed();
+	}
 
+	return k;
 
 }

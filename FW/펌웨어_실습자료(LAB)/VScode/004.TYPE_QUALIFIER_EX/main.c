@@ -1,15 +1,15 @@
 #include "device_driver.h"
 
-#if 1
+#if 0
 
 #define RCC_APB2ENR   (*(unsigned long*)0x40021018)
 
-#define GPIOB_CRH      (*(unsigned long*)0x40010C04)
-#define GPIOB_ODR      (*(unsigned long*)0x40010C0C)
+#define GPIOB_CRH      (*(volatile unsigned long*)0x40010C04)
+#define GPIOB_ODR      (*(volatile unsigned long*)0x40010C0C)
 
 void Main(void)
 {
-	int i;
+	volatile int i;
 
 	Uart_Init(115200);
 	Uart_Printf("LED Toggling Test #1\n");
