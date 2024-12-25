@@ -1189,7 +1189,7 @@ static __INLINE void NVIC_DisableIRQ(IRQn_Type IRQn)
 
 	else
 	{
-		NVIC_DisableIRQ((IRQn_Type)23);
+		NVIC_DisableIRQ(23);
 		Macro_Clear_Bit(RCC->APB2ENR,3);
  80033ac:	f44f 5380 	mov.w	r3, #4096	; 0x1000
  80033b0:	f8c2 1080 	str.w	r1, [r2, #128]	; 0x80
@@ -1300,7 +1300,7 @@ static __INLINE void NVIC_EnableIRQ(IRQn_Type IRQn)
   NVIC->ISER[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F)); /* enable interrupt */
  8003430:	6011      	str	r1, [r2, #0]
 	{
-		NVIC_DisableIRQ((IRQn_Type)23);
+		NVIC_DisableIRQ(23);
 		Macro_Clear_Bit(RCC->APB2ENR,3);
 		Macro_Clear_Bit(RCC->APB2ENR,0);
 	}

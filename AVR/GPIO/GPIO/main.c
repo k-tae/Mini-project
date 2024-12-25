@@ -197,23 +197,23 @@
 //
 
 //차량통제 화살표1
-int main()
-{
-	DDRD = 0xff;
-	uint8_t ledData=0x03, led=0x0c;
-	while(1)
-	{
-		PORTD = ledData;
-		_delay_ms(100);
-		ledData=(ledData|led);
-		led<<=2;
-		if (led == 0)
-		{PORTD = ledData;
-		_delay_ms(100);
-		ledData=0x03, led=0x0c;
-		}
-	}
-}
+//int main()
+//{
+	//DDRD = 0xff;
+	//uint8_t ledData=0x03, led=0x0c;
+	//while(1)
+	//{
+		//PORTD = ledData;
+		//_delay_ms(100);
+		//ledData=(ledData|led);
+		//led<<=2;
+		//if (led == 0)
+		//{PORTD = ledData;
+		//_delay_ms(100);
+		//ledData=0x03, led=0x0c;
+		//}
+	//}
+//}
 
 //차량통제 화살표2
 //int main()
@@ -283,20 +283,22 @@ int main()
 
 //int main()
 //{
-	//DDRA = 0x00;
-	//DDRD = 0xff;
+	//BUTTON_DDR = 0x00;
+	//LED_DDR = 0xff;
 	//uint8_t ledData = 0xff;
 	//uint8_t buttonState;
 	//
 	//while(1)
 	//{
-		//buttonState = PINA;
+		//buttonState = BUTTON_PIN;
 		//if (buttonState == 0x0e) //00001110
-		//PORTD = ledData;
+		//LED_PORT = ledData;
 		//else if (buttonState == 0x0d) //00001101
-		//PORTD = ~(ledData);
+		//LED_PORT = ~(ledData);
 	//}
 //}
+
+
 //int main()
 //{
 	//BUTTON_DDR = 0x00;
@@ -328,7 +330,6 @@ int main()
 	//}
 //}
 
-
 //enum {RIGHT, LEFT, STOP};
 //
 //int main()
@@ -340,7 +341,6 @@ int main()
 	//uint8_t ledData= 0x01;
 	//uint8_t buttonState;
 	//uint8_t state=LEFT;
-	//
 	//
 	//while(1)
 	//{
@@ -440,87 +440,88 @@ int main()
 
 //함수를 이용한 1,2,3,4 버튼 LED
 
-//enum {LEFT, RIGHT, BLINK, OFF};
-//uint8_t ledData;
-//uint8_t stateLast = 0x01;
-//
-//void ledLeftShift(void)
-//{
-	//LED_PORT = ledData;
-	//ledData = (ledData>>7) | (ledData<<1);
-	//stateLast = (ledData<<7) | (ledData>>1);	
-//}
-//
-//void ledRightShift(void)
-//{
-	//LED_PORT = ledData;
-	//ledData = (ledData<<7) | (ledData>>1);	
-	//stateLast = (ledData>>7) | (ledData<<1);
-//}
-//
-//void ledAllBlink(void)
-//{
-	////PORTD = 0x00;
-	////_delay_ms(200);
-	////PORTD = 0xff;
-	////ledData = stateLast;
-	//
-	//static uint8_t ledBlinkData = 0x00;
-	//ledBlinkData ^= 0xff;
-	//LED_PORT = ledBlinkData;
+enum {LEFT, RIGHT, BLINK, OFF};
+uint8_t ledData;
+uint8_t stateLast = 0x01;
+
+void ledLeftShift(void)
+{
+	LED_PORT = ledData;
+	ledData = (ledData>>7) | (ledData<<1);
+	stateLast = (ledData<<7) | (ledData>>1);	
+}
+
+void ledRightShift(void)
+{
+	LED_PORT = ledData;
+	ledData = (ledData<<7) | (ledData>>1);	
+	stateLast = (ledData>>7) | (ledData<<1);
+}
+
+void ledAllBlink(void)
+{
+	//PORTD = 0x00;
+	//_delay_ms(200);
+	//PORTD = 0xff;
 	//ledData = stateLast;
-//}
-//
-//void ledAllOff(void)
-//{
-	//LED_PORT = 0x00;
-	//ledData = stateLast;
-//}
-//
-//int main()
-//{
-	//LED_DDR = 0xff;
-	////BUTTON_DDR = 0x00;
-	//BUTTON_DDR &= ~((1<<LEFT) | (1<<RIGHT) | (1<<BLINK) | (1<<OFF)); //  ????1111 & ~ (00000001 | 00000010 | 00000100 | 00001000) -> ???????? & 11110000 -> ????0000
-	//BUTTON_PORT = 0xff;
-	//
-	//uint8_t state = OFF;
-	//ledData = 0x01;
-		//
-	//while(1)
-	//{
-		//if((BUTTON_PIN & (1<<LEFT))==0)
-		//{
-			//state = LEFT;
-		//}
-		//if((BUTTON_PIN & (1<<RIGHT))==0)
-		//{
-			//state = RIGHT;
-		//}
-		//if((BUTTON_PIN & (1<<BLINK))==0)
-		//{
-			//state = BLINK;
-		//}
-		//if((BUTTON_PIN & (1<<OFF))==0)
-		//{
-			//state = OFF;
-		//}
-		//
-		//switch(state)
-		//{
-			//case LEFT:
-			//ledLeftShift();
-			//break;
-			//case RIGHT:
-			//ledRightShift();
-			//break;
-			//case BLINK:
-			//ledAllBlink();
-			//break;
-			//case OFF:
-			//ledAllOff();
-			//break;
-		//}
-		//_delay_ms(200);
-	//}
-//}
+	
+	static uint8_t ledBlinkData = 0x00;
+	ledBlinkData ^= 0xff;
+	LED_PORT = ledBlinkData;
+	ledData = stateLast;
+}
+
+void ledAllOff(void)
+{
+	LED_PORT = 0x00;
+	ledData = stateLast;
+}
+
+
+int main()
+{
+	LED_DDR = 0xff;
+	//BUTTON_DDR = 0x00;
+	BUTTON_DDR &= ~((1<<LEFT) | (1<<RIGHT) | (1<<BLINK) | (1<<OFF)); //  ????1111 & ~ (00000001 | 00000010 | 00000100 | 00001000) -> ???????? & 11110000 -> ????0000
+	BUTTON_PORT = 0xff;
+	
+	uint8_t state = OFF;
+	ledData = 0x01;
+		
+	while(1)
+	{
+		if((BUTTON_PIN & (1<<LEFT))==0)
+		{
+			state = LEFT;
+		}
+		if((BUTTON_PIN & (1<<RIGHT))==0)
+		{
+			state = RIGHT;
+		}
+		if((BUTTON_PIN & (1<<BLINK))==0)
+		{
+			state = BLINK;
+		}
+		if((BUTTON_PIN & (1<<OFF))==0)
+		{
+			state = OFF;
+		}
+		
+		switch(state)
+		{
+			case LEFT:
+			ledLeftShift();
+			break;
+			case RIGHT:
+			ledRightShift();
+			break;
+			case BLINK:
+			ledAllBlink();
+			break;
+			case OFF:
+			ledAllOff();
+			break;
+		}
+		_delay_ms(200);
+	}
+}

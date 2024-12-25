@@ -29,8 +29,8 @@ void Main(void)
 		}
 
 		LED_Display(1);
-		TIM2_Delay(500);
+		TIM2_Delay(1000);
 		LED_Display(2);
-		TIM2_Delay(500);
+		TIM2_Delay(1000);
 	}
 }
