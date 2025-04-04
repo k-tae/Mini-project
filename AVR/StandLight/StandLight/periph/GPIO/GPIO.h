@@ -1,6 +1,4 @@
-﻿
-
-#ifndef GPIO_H_
+﻿#ifndef GPIO_H_
 #define GPIO_H_
 #define F_CPU 16000000UL
 #include <avr/io.h>

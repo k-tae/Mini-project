@@ -17,69 +17,6 @@ void StandLight_init()
 	LED_init(&led_7,&LED_DDR,&LED_PORT,7);
 }
 
-//void StandLight_execute()
-//{
-	//switch(state)
-	//{
-		//case level_0:
-		//led0();
-		//if (BUTTON_GETSTATE(&buttonMode) == ACT_REALESED)
-		//{
-			//led1();
-			//state = level_1;
-		//}
-		//break;
-		//case level_1:
-		//if (BUTTON_GETSTATE(&buttonMode) == ACT_REALESED)
-		//{
-			//led2();
-			//state = level_2;
-		//}
-		//if (BUTTON_GETSTATE(&buttonOff) == ACT_REALESED)
-		//{
-			//led0();
-			//state = level_0;
-		//}
-		//break;
-		//case level_2:
-		//if (BUTTON_GETSTATE(&buttonMode) == ACT_REALESED)
-		//{
-			//led3();
-			//state = level_3;
-		//}
-		//if (BUTTON_GETSTATE(&buttonOff) == ACT_REALESED)
-		//{
-			//led0();
-			//state = level_0;
-		//}
-		//break;
-		//case level_3:
-		//if (BUTTON_GETSTATE(&buttonMode) == ACT_REALESED)
-		//{
-			//led4();
-			//state = level_4;
-		//}
-		//if (BUTTON_GETSTATE(&buttonOff) == ACT_REALESED)
-		//{
-			//led0();
-			//state = level_0;
-		//}
-		//break;
-		//case level_4:
-		//if (BUTTON_GETSTATE(&buttonMode) == ACT_REALESED)
-		//{
-			//led0();
-			//state = level_0;
-		//}
-		//if (BUTTON_GETSTATE(&buttonOff) == ACT_REALESED)
-		//{
-			//led0();
-			//state = level_0;
-		//}
-		//break;
-	//}
-//}
-
 void StandLight_run()
 {
 	StandLight_eventCheck();

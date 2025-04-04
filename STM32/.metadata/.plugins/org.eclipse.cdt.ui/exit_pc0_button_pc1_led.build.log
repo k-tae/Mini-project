@@ -1,0 +1,10 @@
+09:14:33 **** Build of configuration Debug for project exit_pc0_button_pc1_led ****
+make -j8 all 
+arm-none-eabi-size  exit_pc0_button_pc1_led.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17396	    104	   2064	  19564	   4c6c	exit_pc0_button_pc1_led.elf
+Finished building: default.size.stdout
+ 
+
+09:14:33 Build Finished. 0 errors, 0 warnings. (took 259ms)
+

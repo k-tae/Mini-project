@@ -1,0 +1,10 @@
+09:53:22 **** Incremental Build of configuration Debug for project nucleo_f411re_uart2_printf_uart6_wifi_new ****
+make -j8 all 
+arm-none-eabi-size  nucleo_f411re_uart2_printf_uart6_wifi_new.elf 
+   text	   data	    bss	    dec	    hex	filename
+  48120	    472	   4488	  53080	   cf58	nucleo_f411re_uart2_printf_uart6_wifi_new.elf
+Finished building: default.size.stdout
+ 
+
+09:53:22 Build Finished. 0 errors, 0 warnings. (took 350ms)
+

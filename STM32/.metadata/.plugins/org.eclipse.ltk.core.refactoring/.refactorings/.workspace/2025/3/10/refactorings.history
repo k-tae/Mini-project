@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;nucleo_f411re_uart2_printf_uart6_wifi_new&apos;" deleteContents="false" description="Delete resource &apos;nucleo_f411re_uart2_printf_uart6_wifi_new&apos;" element1="/nucleo_f411re_uart2_printf_uart6_wifi_new" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1740987726964"/>
+</session>

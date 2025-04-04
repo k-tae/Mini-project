@@ -1,0 +1,1 @@
+ALTER TABLE event_time ADD COLUMN event_type VARCHAR(50) FIRST;
