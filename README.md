@@ -24,9 +24,13 @@
 
 [![먼지 센서 영상](https://img.youtube.com/vi/PgM0-U3HY6g/0.jpg)](https://www.youtube.com/watch?v=PgM0-U3HY6g)
 
+- 먼지 농도에 따라 높으면 빨강, 중간이면 초록, 좋으면 파란 불이 들어온다.
+
 **자동 공조 시스템 영상**
 
 [![자동 공조 시스템 영상](https://img.youtube.com/vi/z_D4CBkErMk/0.jpg)](https://www.youtube.com/watch?v=z_D4CBkErMk)
+
+- 습도 및 온도에 따라 환풍기와 에어컨의 강도가 자동으로 가동된다.
 
 ---
 
