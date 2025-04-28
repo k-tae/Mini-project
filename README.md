@@ -19,6 +19,6 @@
 
 ## 📽️ 시연 영상
 
-시연 영상은 [여기]([https://github.com/k-tae/project_MOMs_Cookie/tree/main/%EC%8B%9C%EC%97%B0%EC%98%81%EC%83%81](https://github.com/k-tae/Mini-project/tree/main/2.%EC%98%81%EC%83%81))에서 확인하실 수 있습니다.
+시연 영상은 [여기](https://github.com/k-tae/Mini-project/tree/main/2.%EC%98%81%EC%83%81))에서 확인하실 수 있습니다.
 
 ---
