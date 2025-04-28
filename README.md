@@ -1,11 +1,11 @@
-# Smart Vehicle Climate Control System (Mini-project)
+# 🚗 Smart Vehicle Climate Control System (Mini-project)
 
 ## 📋 프로젝트 소개
 본 프로젝트는 차량 내부 환경(온도, 습도 등)을 자동으로 제어하여 쾌적한 상태를 유지하는 스마트 공조 시스템을 개발하는 것을 목표로 합니다.
 
 ## 🛠 주요 기능
 - 실시간 온도 및 습도 측정
-- 자동 냉방 및 난방 모드 전환
+- 자동 냉난방 모드 및 공기청정 모드 전환
 - 사용자 설정 기반 수동 제어 기능
 - 간단한 UI 디스플레이 출력
 
