@@ -13,6 +13,6 @@
 - 언어 : C
 - 개발 환경 : VSCode
 - 하드웨어 : STM32, RaspberryPi, Arduino
-- 데이터베이스 : Heidy Sql
+- 데이터베이스 : Heidi Sql
 
 ---
