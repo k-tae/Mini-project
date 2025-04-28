@@ -19,6 +19,6 @@
 
 ## 📽️ 시연 영상
 
-시연 영상은 ([여기](https://github.com/k-tae/Mini-project/tree/main/2.%EC%98%81%EC%83%81))에서 확인하실 수 있습니다.
+시연 영상은 [여기](https://github.com/k-tae/Mini-project/tree/main/2.%EC%98%81%EC%83%81)에서 확인하실 수 있습니다.
 
 ---
